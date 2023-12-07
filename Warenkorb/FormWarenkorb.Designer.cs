@@ -30,6 +30,7 @@
         {
             this.pictureBoxWarenkorbBildFormWarenkorb = new System.Windows.Forms.PictureBox();
             this.labelWarenborbFormWarenkorb = new System.Windows.Forms.Label();
+            this.textBoxWarenkorbProdukte = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarenkorbBildFormWarenkorb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,20 @@
             this.labelWarenborbFormWarenkorb.TabIndex = 7;
             this.labelWarenborbFormWarenkorb.Text = "Dein Warenkorb";
             // 
+            // textBoxWarenkorbProdukte
+            // 
+            this.textBoxWarenkorbProdukte.Location = new System.Drawing.Point(103, 127);
+            this.textBoxWarenkorbProdukte.Multiline = true;
+            this.textBoxWarenkorbProdukte.Name = "textBoxWarenkorbProdukte";
+            this.textBoxWarenkorbProdukte.Size = new System.Drawing.Size(460, 291);
+            this.textBoxWarenkorbProdukte.TabIndex = 8;
+            // 
             // FormWarenkorb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxWarenkorbProdukte);
             this.Controls.Add(this.labelWarenborbFormWarenkorb);
             this.Controls.Add(this.pictureBoxWarenkorbBildFormWarenkorb);
             this.Name = "FormWarenkorb";
@@ -71,5 +81,6 @@
 
         private System.Windows.Forms.PictureBox pictureBoxWarenkorbBildFormWarenkorb;
         private System.Windows.Forms.Label labelWarenborbFormWarenkorb;
+        private System.Windows.Forms.TextBox textBoxWarenkorbProdukte;
     }
 }

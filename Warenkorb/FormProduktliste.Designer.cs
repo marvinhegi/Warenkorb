@@ -111,6 +111,7 @@
             this.linkLabelWarenkorb.TabIndex = 7;
             this.linkLabelWarenkorb.TabStop = true;
             this.linkLabelWarenkorb.Text = "Warenkorb anzeigen";
+            this.linkLabelWarenkorb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelWarenkorb_LinkClicked);
             // 
             // FormProduktliste
             // 
@@ -127,6 +128,7 @@
             this.Controls.Add(this.buttonHinzufugen);
             this.Name = "FormProduktliste";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormProduktliste_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1Anzahl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarenkorbBildFormProduktliste)).EndInit();
             this.ResumeLayout(false);
