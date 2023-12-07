@@ -18,17 +18,19 @@ namespace Warenkorb
             InitializeComponent();
         }
 
-        private void buttonHinzufugen_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
        
 
 
         private void linkLabelWarenkorb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormWarenkorb formWarenkorb = new FormWarenkorb();
+
+
+            FormWarenkorb formWarenkorb = new FormWarenkorb(this.orderedItems);
             formWarenkorb.ShowDialog();
+
+           
+
         }
 
         private void FormProduktliste_Load(object sender, EventArgs e)
@@ -58,6 +60,26 @@ namespace Warenkorb
                 p.Price = Convert.ToDouble(reader["price"]);
                 comboBoxProdukt.Items.Add(p);
             }
+        }
+        // Liste deklarieren und intialisieren
+        List<OrderItem> orderedItems = new List<OrderItem>();
+        private void buttonHinzufugen_Click(object sender, EventArgs e)
+        {
+
+            if (numericUpDown1Anzahl.Value > 0 && comboBoxProdukt.SelectedItem != null)
+            {
+                // neues OrderItem instanziieren und zur Liste hinzufügen
+                OrderItem item = new OrderItem();
+                item.Product = comboBoxProdukt.SelectedItem as Product;
+                item.Quantity = Convert.ToInt32(numericUpDown1Anzahl.Value);
+                orderedItems.Add(item);
+                int anzwaren = Convert.ToInt32(labelWarenkorbAnzahl.Text);
+                anzwaren++;
+                labelWarenkorbAnzahl.Text = anzwaren.ToString();
+            }
+
+
+
         }
     }
 }

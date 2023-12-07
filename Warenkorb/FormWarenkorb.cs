@@ -12,9 +12,29 @@ namespace Warenkorb
 {
     public partial class FormWarenkorb : Form
     {
-        public FormWarenkorb()
+        public FormWarenkorb(List<OrderItem> orderedItems)
         {
+            string Produktetext = "";
+            double prise = 0;
             InitializeComponent();
+            for (int i = 0; i < orderedItems.Count; i++)
+            {
+                Produktetext = Produktetext + "\r\n"+orderedItems[i].Quantity.ToString()+" Ex.\t"+orderedItems[i].Product.Name.ToString();
+                prise = prise + orderedItems[i].GetAmount(orderedItems[i].Quantity, orderedItems[i].Product.Price);
+            }
+            textBoxWarenkorbProdukte.Text = Produktetext;
+            labelSummeValue.Text = prise.ToString();
+        }
+
+        private void buttonabbrechen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormWarenkorb_Load(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }
