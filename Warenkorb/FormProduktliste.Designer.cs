@@ -48,6 +48,7 @@
             this.buttonHinzufugen.TabIndex = 0;
             this.buttonHinzufugen.Text = "Zum Warenkorb hinzufügen";
             this.buttonHinzufugen.UseVisualStyleBackColor = true;
+            this.buttonHinzufugen.Click += new System.EventHandler(this.buttonHinzufugen_Click);
             // 
             // comboBoxProdukt
             // 
@@ -62,7 +63,7 @@
             this.labelProdukt.AutoSize = true;
             this.labelProdukt.Location = new System.Drawing.Point(75, 123);
             this.labelProdukt.Name = "labelProdukt";
-            this.labelProdukt.Size = new System.Drawing.Size(70, 20);
+            this.labelProdukt.Size = new System.Drawing.Size(56, 16);
             this.labelProdukt.TabIndex = 2;
             this.labelProdukt.Text = "Produkt:";
             // 
@@ -71,7 +72,7 @@
             this.labelAnzahl.AutoSize = true;
             this.labelAnzahl.Location = new System.Drawing.Point(75, 204);
             this.labelAnzahl.Name = "labelAnzahl";
-            this.labelAnzahl.Size = new System.Drawing.Size(63, 20);
+            this.labelAnzahl.Size = new System.Drawing.Size(50, 16);
             this.labelAnzahl.TabIndex = 3;
             this.labelAnzahl.Text = "Anzahl:";
             // 
